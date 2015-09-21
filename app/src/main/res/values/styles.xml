@@ -1,0 +1,21 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#34495E</item>
+        <item name="colorPrimaryDark">#2c3e50</item>
+        <item name="colorAccent">#009688</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Widget.CardContent" parent="android:Widget">
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingBottom">16dp</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:textColorPrimary">#222</item>
+        <item name="android:textColorSecondary">#333</item>
+    </style>
+
+</resources>

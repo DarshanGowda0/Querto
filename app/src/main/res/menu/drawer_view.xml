@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/car"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_messages"
+            android:icon="@drawable/car"
+            android:title="Messages" />
+        <item
+            android:id="@+id/nav_friends"
+            android:icon="@drawable/car"
+            android:title="Friends" />
+        <item
+            android:id="@+id/nav_discussion"
+            android:icon="@drawable/car"
+            android:title="Discussion" />
+    </group>
+
+    <item android:title="Others">
+        <menu>
+            <item
+                android:icon="@drawable/car"
+                android:title="Settings" />
+            <item
+                android:icon="@drawable/car"
+                android:title="Help" />
+        </menu>
+    </item>
+
+</menu>

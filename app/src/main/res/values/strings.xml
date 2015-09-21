@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Querto2</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_fetch_timeline">FetchTimeline</string>
+    <string name="title_activity_post_question">PostQuestion</string>
+</resources>
