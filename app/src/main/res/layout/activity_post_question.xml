@@ -1,8 +1,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.twinvaves.darshan.querto2.PostQuestion">
 
     <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
@@ -24,20 +24,19 @@
                 android:layout_alignParentRight="true">
 
                 <ImageView
+                    android:id="@+id/underline"
                     android:layout_width="28dp"
                     android:layout_height="28dp"
                     android:layout_margin="10dp"
                     android:layout_weight="1"
-                    android:id="@+id/underline"
-                    android:background="@drawable/link_toggle"
-                    />
+                    android:background="@drawable/link_toggle" />
 
                 <ImageView
+                    android:id="@+id/picture"
                     android:layout_width="28dp"
                     android:layout_height="28dp"
                     android:layout_margin="10dp"
                     android:layout_weight="1"
-                    android:id="@+id/picture"
                     android:src="@drawable/picture" />
 
 
@@ -48,90 +47,95 @@
                 android:layout_height="match_parent">
 
                 <ImageView
+                    android:id="@+id/bold"
                     android:layout_width="28dp"
                     android:layout_height="28dp"
                     android:layout_margin="10dp"
                     android:layout_weight="1"
-                    android:id="@+id/bold"
-                    android:background="@drawable/bold_toggle"
-                    />
+                    android:background="@drawable/bold_toggle" />
 
                 <ImageView
+                    android:id="@+id/italic"
                     android:layout_width="28dp"
                     android:layout_height="28dp"
                     android:layout_margin="10dp"
                     android:layout_weight="1"
-                    android:id="@+id/italic"
-                    android:background="@drawable/italic_toggle"
-                    />
+                    android:background="@drawable/italic_toggle" />
 
             </LinearLayout>
 
         </RelativeLayout>
 
 
-
-
-
     </android.support.v7.widget.Toolbar>
 
-<ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_below="@+id/toolbarQuestion">
 
-    <com.commonsware.cwac.richedit.RichEditText
-        android:id="@+id/questionTv"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/toolbarQuestion"
-        android:imeOptions="flagNoExtractUi"
-        android:layout_margin="5dp"
-        android:hint="Enter the Question">
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbarQuestion">
 
-        <requestFocus />
-
-    </com.commonsware.cwac.richedit.RichEditText>
-
-</ScrollView>
-
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/view"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_alignParentBottom="true"
-        android:background="#fff"
-        android:elevation="5dp">
-
-        <RelativeLayout
+        <com.commonsware.cwac.richedit.RichEditText
+            android:id="@+id/questionTv"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbarQuestion"
+            android:layout_margin="5dp"
+            android:hint="Enter the Question"
+            android:imeOptions="flagNoExtractUi">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_margin="15dp"
-                android:text="POST"
-                android:textColor="#009688" />
+            <requestFocus />
 
-        </RelativeLayout>
+        </com.commonsware.cwac.richedit.RichEditText>
+
+    </ScrollView>
 
 
-    </android.support.v7.widget.Toolbar>
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBar2"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="48dp"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_alignParentBottom="true"
+            android:background="#fff"
+            android:elevation="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="15dp"
+                    android:text="POST"
+                    android:textColor="#009688" />
+
+            </RelativeLayout>
+
+
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/view"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
         android:clickable="true"
         android:src="@drawable/mic2"
-        app:layout_anchor="@id/view"
-        />
-
+        app:layout_anchor="@id/appBar2"
+        app:layout_anchorGravity="bottom|right|end"
+        android:la="@+id/appBar2"
+        android:layout_above="@+id/appBar2"
+        android:layout_centerHorizontal="true" />
 
 
 </RelativeLayout>
